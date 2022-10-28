@@ -2,9 +2,9 @@ import express from "express";
 
 const app = express();
 
-const port = 4500;
+const PORT = process.env.PORT || 4500;
 
-app.get("/getStudentBio", (req, res) => {
+app.get("/", (req, res) => {
   res.send({
     slackUsername: "Omas Ajiri",
     backend: true,
@@ -13,6 +13,6 @@ app.get("/getStudentBio", (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server is listening at port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is listening at port ${PORT}`);
 });
