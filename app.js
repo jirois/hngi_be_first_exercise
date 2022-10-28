@@ -4,7 +4,7 @@ const app = express();
 
 const port = 4500;
 
-app.get("/", (req, res) => {
+app.get("/getStudentBio", (req, res) => {
   res.send({
     slackUsername: "Omas Ajiri",
     backend: true,
